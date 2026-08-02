@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Muskan Tanwar | Software Developer</title>
+
+<meta name="description" content="Muskan Tanwar Portfolio">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#fff7fb;
+color:#222;
+overflow-x:hidden;
+transition:.4s;
+}
+
+body.dark{
+
+background:#101010;
+color:white;
+}
+
+a{
+text-decoration:none;
+}
+
+ul{
+list-style:none;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#ff4fa1;
+border-radius:50px;
+}
+
+::-webkit-scrollbar-track{
+background:#ffeaf5;
+}
+
+/* LOADER */
+
+.loader{
+
+position:fixed;
+inset:0;
+background:#fff7fb;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+transition:.8s;
+}
+
+.loader.hide{
+
+opacity:0;
+visibility:hidden;
+}
+
+.loader h1{
+
+font-size:60px;
+font-weight:800;
+color:#ff4fa1;
+animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.15);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+
+
+/* NAVBAR */
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 8%;
+backdrop-filter:blur(25px);
+background:rgba(255,255,255,.5);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+z-index:999;
+}
+
+body.dark nav{
+
+background:rgba(20,20,20,.6);
+}
+
+.logo{
+
+font-size:34px;
+font-weight:700;
+color:#ff4fa1;
+}
+
+nav ul{
+
+display:flex;
+gap:35px;
+}
+
+nav ul li a{
+
+font-weight:500;
+color:#222;
+transition:.3s;
+}
+
+body.dark nav ul li a{
+
+color:white;
+}
+
+nav ul li a:hover{
+
+color:#ff4fa1;
+}
+
+.right{
+
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.toggle{
+
+font-size:22px;
+cursor:pointer;
+color:#ff4fa1;
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:130px 8%;
+gap:80px;
+position:relative;
+overflow:hidden;
+}
+
+/* BACKGROUND */
+
+.blob{
+
+position:absolute;
+border-radius:50%;
+filter:blur(80px);
+opacity:.45;
+animation:float 10s infinite ease-in-out;
+}
+
+.blob1{
+
+width:340px;
+height:340px;
+background:#ff9fd0;
+top:-120px;
+left:-100px;
+}
+
+.blob2{
+
+width:420px;
+height:420px;
+background:#ffcbe5;
+right:-120px;
+bottom:-140px;
+animation-delay:3s;
+}
+
+.blob3{
+
+width:260px;
+height:260px;
+background:#ff5ca9;
+left:40%;
+top:35%;
+animation-delay:5s;
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-50px)
+translateX(25px);
+
+}
+
+100%{
+
+transform:none;
+
+}
+
+}
+
+/* HERO TEXT */
+
+.left-side{
+
+flex:1;
+position:relative;
+z-index:5;
+}
+
+.tag{
+
+display:inline-block;
+padding:10px 18px;
+background:#ffe5f2;
+border-radius:30px;
+color:#ff4fa1;
+font-weight:600;
+margin-bottom:20px;
+}
+
+body.dark .tag{
+
+background:#222;
+}
+
+.left-side h1{
+
+font-size:70px;
+line-height:1.1;
+margin-bottom:15px;
+}
+
+.left-side h2{
+
+height:45px;
+font-size:34px;
+color:#666;
+margin-bottom:25px;
+}
+
+body.dark .left-side h2{
+
+color:#ddd;
+}
+
+.left-side p{
+
+font-size:18px;
+line-height:1.8;
+max-width:650px;
+margin-bottom:35px;
+}
+
+.buttons{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+
+padding:15px 34px;
+border-radius:50px;
+font-weight:600;
+transition:.35s;
+}
+
+.primary{
+
+background:#ff4fa1;
+color:white;
+box-shadow:0 15px 35px rgba(255,79,161,.35);
+}
+
+.primary:hover{
+
+transform:translateY(-8px);
+}
+
+.secondary{
+
+border:2px solid #ff4fa1;
+color:#ff4fa1;
+}
+
+.secondary:hover{
+
+background:#ff4fa1;
+color:white;
+}
+
+/* SOCIAL */
+
+.social{
+
+display:flex;
+gap:18px;
+margin-top:40px;
+}
+
+.social a{
+
+width:50px;
+height:50px;
+border-radius:50%;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:20px;
+color:#ff4fa1;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+transition:.35s;
+}
+
+body.dark .social a{
+
+background:#222;
+}
+
+.social a:hover{
+
+transform:translateY(-8px) rotate(10deg);
+}
+
+/* IMAGE */
+
+.right-side{
+
+flex:1;
+display:flex;
+justify-content:center;
+position:relative;
+z-index:5;
+}
+
+.circle{
+
+width:450px;
+height:450px;
+border-radius:50%;
+padding:10px;
+background:linear-gradient(135deg,#ff4fa1,#ffc8e2,#ff8ec6);
+animation:rotate 18s linear infinite;
+}
+
+.circle img{
+
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+border:8px solid white;
+}
+
+@keyframes rotate{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+section{
+
+padding:120px 8%;
+}
+
+.title{
+
+text-align:center;
+font-size:46px;
+margin-bottom:70px;
+color:#ff4fa1;
+font-weight:700;
+}
+
+.reveal{
+
+opacity:0;
+transform:translateY(70px);
+transition:1s;
+}
+
+.reveal.active{
+
+opacity:1;
+transform:none;
+}
+
+@media(max-width:1000px){
+
+.hero{
+
+flex-direction:column-reverse;
+text-align:center;
+padding-top:160px;
+
+}
+
+.left-side h1{
+
+font-size:50px;
+
+}
+
+.left-side h2{
+
+font-size:28px;
+
+}
+
+.buttons,
+.social{
+
+justify-content:center;
+
+}
+
+.circle{
+
+width:320px;
+height:320px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+.avatar-placeholder{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff4fa1,#ffc2df);
+    font-size:120px;
+    font-weight:700;
+    color:white;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="loader">
+
+<h1>MT</h1>
+
+</div>
+
+
+
+<nav>
+
+<div class="logo">
+
+Muskan.
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="right">
+
+<div class="toggle">
+
+<i class="fa-solid fa-moon"></i>
+
+</div>
+
+</div>
+
+</nav>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<section class="hero" id="home">
+
+<div class="left-side">
+
+<div class="tag">
+
+✨ Software Developer • AI Enthusiast
+
+</div>
+
+<h1>
+
+Muskan Tanwar
+
+</h1>
+
+<h2>
+
+<span id="typing"></span>
+
+</h2>
+
+<p>
+
+Computer Engineering student passionate about building scalable web applications, AI-powered solutions, and solving complex DSA problems. Amazon QAE Intern, Full-Stack Developer Intern, and 550+ LeetCode problems solved.
+
+</p>
+
+<div class="buttons">
+
+<a href="resume.pdf"
+target="_blank"
+class="btn primary">
+
+<i class="fa-solid fa-file"></i>
+View Resume
+
+</a>
+
+<a href="#contact" class="btn secondary">
+
+Contact Me
+
+</a>
+
+</div>
+
+<div class="social">
+
+<a href="https://github.com/muskantanwar7" target="_blank">
+
+<i class="fab fa-github"></i>
+
+</a>
+
+<a href="https://leetcode.com/u/muskan_tanwar57/" target="_blank">
+
+<i class="fas fa-code"></i>
+
+</a>
+
+<a href="https://www.linkedin.com/in/muskan-tanwar-6543822b1" target="_blank">
+
+<i class="fab fa-linkedin-in"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="right-side">
+
+<div class="circle">
+
+<div class="avatar-placeholder">
+MT
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="reveal">
+
+<h2 class="title">
+About Me
+</h2>
+
+<div class="about-container">
+
+<div class="about-left">
+
+<div class="glass-card">
+
+<h3>👋 Hi, I'm Muskan Tanwar</h3>
+
+<p>
+
+I'm a Computer Engineering student at
+<b>JC Bose University of Science and Technology, YMCA</b>
+with a passion for building modern web applications,
+AI-powered solutions and solving Data Structures &
+Algorithms problems.
+
+</p>
+
+<p>
+
+I enjoy creating scalable applications that combine
+beautiful user experiences with efficient backend logic.
+During my internships at <b>Amazon</b> and
+<b>Callisto Infotech</b>, I worked on software testing,
+frontend development,backend debugging and automation.
+
+</p>
+
+<p>
+
+I love learning new technologies and continuously improving
+my development skills through projects and competitive
+programming.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="about-right">
+
+<div class="stats-grid">
+
+<div class="stat glass-card">
+
+<h1 class="counter" data-target="550">0</h1>
+
+<p>LeetCode Problems</p>
+
+</div>
+
+<div class="stat glass-card">
+
+<h1 class="counter" data-target="4">0</h1>
+
+<p>Major Projects</p>
+
+</div>
+
+<div class="stat glass-card">
+
+<h1 class="counter" data-target="2">0</h1>
+
+<p>Internships</p>
+
+</div>
+
+<div class="stat glass-card">
+
+<h1 class="counter" data-target="2027">0</h1>
+
+<p>Graduation</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="reveal">
+
+<h2 class="title">
+
+Education
+
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content glass-card">
+
+<h3>
+
+B.Tech Computer Engineering
+
+</h3>
+
+<h4>
+
+JC Bose University of Science & Technology, YMCA
+
+</h4>
+
+<span>
+
+2023 – 2027
+
+</span>
+
+<p>
+
+CGPA : 7.0
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content glass-card">
+
+<h3>
+
+Senior Secondary (Non-Medical)
+
+</h3>
+
+<h4>
+
+Kendriya Vidyalaya, Narnaul
+
+</h4>
+
+<span>
+
+2021 – 2022
+
+</span>
+
+<p>
+
+75.2%
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content glass-card">
+
+<h3>
+
+Secondary School
+
+</h3>
+
+<h4>
+
+Kendriya Vidyalaya, Narnaul
+
+</h4>
+
+<span>
+
+2019 – 2020
+
+</span>
+
+<p>
+
+82.6%
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section class="reveal">
+
+<h2 class="title">
+
+Experience
+
+</h2>
+
+<div class="experience-grid">
+
+<div class="glass-card experience-card">
+
+<i class="fa-brands fa-amazon"></i>
+
+<h3>
+
+Amazon
+
+</h3>
+
+<h4>
+
+QAE Intern
+
+</h4>
+
+<span>
+
+June 2025 – August 2025
+
+</span>
+
+<p>
+
+Worked on Quality Assurance Engineering, automation,
+manual testing, API validation using Amazon JASS,
+and preflight checks before production releases.
+
+</p>
+
+</div>
+
+<div class="glass-card experience-card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>
+
+Callisto Infotech
+
+</h3>
+
+<h4>
+
+Frontend Developer Intern
+
+</h4>
+
+<span>
+
+Oct 2025 – Dec 2025
+
+</span>
+
+<p>
+
+Enhanced frontend interfaces,
+resolved UI bugs,
+managed Django Admin content
+and improved overall user experience.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.about-container{
+
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+.glass-card{
+
+background:rgba(255,255,255,.45);
+backdrop-filter:blur(20px);
+padding:35px;
+border-radius:25px;
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+transition:.4s;
+
+}
+
+body.dark .glass-card{
+
+background:rgba(255,255,255,.08);
+
+}
+
+.glass-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.about-left p{
+
+margin-top:20px;
+line-height:1.9;
+
+}
+
+.stats-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+
+}
+
+.stat{
+
+text-align:center;
+
+}
+
+.stat h1{
+
+font-size:50px;
+color:#ff4fa1;
+
+}
+
+.timeline{
+
+position:relative;
+margin:auto;
+max-width:900px;
+
+}
+
+.timeline::before{
+
+content:"";
+position:absolute;
+left:25px;
+width:4px;
+height:100%;
+background:#ff4fa1;
+
+}
+
+.timeline-item{
+
+display:flex;
+margin-bottom:45px;
+
+}
+
+.timeline-dot{
+
+width:18px;
+height:18px;
+background:#ff4fa1;
+border-radius:50%;
+margin-right:30px;
+margin-top:20px;
+z-index:2;
+
+}
+
+.timeline-content{
+
+width:100%;
+
+}
+
+.timeline-content span{
+
+display:block;
+margin:10px 0;
+color:#ff4fa1;
+font-weight:600;
+
+}
+
+.experience-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+
+}
+
+.experience-card{
+
+text-align:center;
+
+}
+
+.experience-card i{
+
+font-size:60px;
+color:#ff4fa1;
+margin-bottom:20px;
+
+}
+
+.experience-card h3{
+
+margin-bottom:8px;
+
+}
+
+.experience-card span{
+
+display:block;
+margin:15px 0;
+font-weight:600;
+color:#ff4fa1;
+
+}
+
+.experience-card p{
+
+line-height:1.8;
+
+}
+
+@media(max-width:900px){
+
+.about-container{
+
+grid-template-columns:1fr;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="reveal">
+
+<h2 class="title">
+Technical Skills
+</h2>
+
+<div class="skills-grid">
+
+<div class="glass-card">
+
+<h3>C++</h3>
+
+<div class="progress">
+<div class="progress-bar cpp" data-width="95%"></div>
+</div>
+
+</div>
+
+<div class="glass-card">
+
+<h3>Java</h3>
+
+<div class="progress">
+<div class="progress-bar java" data-width="85%"></div>
+</div>
+
+</div>
+
+<div class="glass-card">
+
+<h3>HTML / CSS</h3>
+
+<div class="progress">
+<div class="progress-bar html" data-width="98%"></div>
+</div>
+
+</div>
+
+<div class="glass-card">
+
+<h3>JavaScript</h3>
+
+<div class="progress">
+<div class="progress-bar js" data-width="90%"></div>
+</div>
+
+</div>
+
+<div class="glass-card">
+
+<h3>React</h3>
+
+<div class="progress">
+<div class="progress-bar react" data-width="88%"></div>
+</div>
+
+</div>
+
+<div class="glass-card">
+
+<h3>Django</h3>
+
+<div class="progress">
+<div class="progress-bar django" data-width="82%"></div>
+</div>
+
+</div>
+
+<div class="glass-card">
+
+<h3>Python</h3>
+
+<div class="progress">
+<div class="progress-bar python" data-width="92%"></div>
+</div>
+
+</div>
+
+<div class="glass-card">
+
+<h3>Machine Learning</h3>
+
+<div class="progress">
+<div class="progress-bar ml" data-width="85%"></div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TECH STACK ================= -->
+
+<section class="reveal">
+
+<h2 class="title">
+
+Tech Stack
+
+</h2>
+
+<div class="tech-grid">
+
+<div class="tech-card"><i class="fab fa-html5"></i><span>HTML5</span></div>
+
+<div class="tech-card"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+
+<div class="tech-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
+
+<div class="tech-card"><i class="fab fa-react"></i><span>React</span></div>
+
+<div class="tech-card"><i class="fab fa-python"></i><span>Python</span></div>
+
+<div class="tech-card"><i class="fas fa-database"></i><span>SQL</span></div>
+
+<div class="tech-card"><i class="fab fa-github"></i><span>GitHub</span></div>
+
+<div class="tech-card"><i class="fas fa-brain"></i><span>AI / ML</span></div>
+
+<div class="tech-card"><i class="fas fa-code"></i><span>DSA</span></div>
+
+<div class="tech-card"><i class="fas fa-server"></i><span>Django</span></div>
+
+<div class="tech-card"><i class="fas fa-chart-line"></i><span>Pandas</span></div>
+
+<div class="tech-card"><i class="fas fa-chart-area"></i><span>NumPy</span></div>
+
+</div>
+
+</section>
+
+<!-- ================= CODING PROFILES ================= -->
+
+<section class="reveal">
+
+<h2 class="title">
+
+Coding Profiles
+
+</h2>
+
+<div class="profiles">
+
+<a href="https://github.com/muskantanwar7" target="_blank" class="profile-card">
+
+<i class="fab fa-github"></i>
+
+<h3>GitHub</h3>
+
+<p>Open Source Projects</p>
+
+</a>
+
+<a href="https://leetcode.com/u/muskan_tanwar57/" target="_blank" class="profile-card">
+
+<i class="fas fa-code"></i>
+
+<h3>LeetCode</h3>
+
+<p>550+ Problems Solved</p>
+
+</a>
+
+<a href="https://www.linkedin.com/in/muskan-tanwar-6543822b1" target="_blank" class="profile-card">
+
+<i class="fab fa-linkedin"></i>
+
+<h3>LinkedIn</h3>
+
+<p>Professional Profile</p>
+
+</a>
+
+</div>
+
+</section>
+
+<style>
+
+.skills-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+
+}
+
+.progress{
+
+height:12px;
+background:#eee;
+border-radius:30px;
+margin-top:15px;
+overflow:hidden;
+
+}
+
+.progress-bar{
+
+height:100%;
+width:0;
+background:linear-gradient(90deg,#ff4fa1,#ffb8da);
+border-radius:30px;
+transition:2s;
+
+}
+
+.tech-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:25px;
+
+}
+
+.tech-card{
+
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+transition:.4s;
+
+}
+
+body.dark .tech-card{
+
+background:#1b1b1b;
+
+}
+
+.tech-card:hover{
+
+transform:translateY(-10px) rotate(3deg);
+
+}
+
+.tech-card i{
+
+font-size:45px;
+margin-bottom:15px;
+color:#ff4fa1;
+
+}
+
+.tech-card span{
+
+font-weight:600;
+
+}
+
+.profiles{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+
+}
+
+.profile-card{
+
+background:white;
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.4s;
+color:#333;
+
+}
+
+body.dark .profile-card{
+
+background:#1d1d1d;
+color:white;
+
+}
+
+.profile-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.profile-card i{
+
+font-size:55px;
+color:#ff4fa1;
+margin-bottom:20px;
+
+}
+
+.profile-card h3{
+
+margin-bottom:10px;
+
+}
+
+</style>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="reveal">
+
+<h2 class="title">
+Featured Projects
+</h2>
+
+<div class="projects-grid">
+
+<div class="project-card glass-card">
+
+<div class="project-number">01</div>
+
+<h3>🌿 Plant Disease Detection System</h3>
+
+<p>
+Deep Learning based CNN model capable of detecting
+plant diseases from leaf images using TensorFlow,
+OpenCV and image preprocessing techniques.
+</p>
+
+<div class="tech">
+
+<span>Python</span>
+<span>TensorFlow</span>
+<span>CNN</span>
+<span>OpenCV</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/muskantanwar7/plant-disease-detection-system" target="_blank">
+
+GitHub
+
+</a>
+
+</div>
+
+</div>
+
+<div class="project-card glass-card">
+
+<div class="project-number">02</div>
+
+<h3>💳 Finance Data Processing Backend</h3>
+
+<p>
+
+Secure backend application implementing
+authentication, role-based access control,
+REST APIs and finance data management.
+
+</p>
+
+<div class="tech">
+
+<span>Java</span>
+<span>Spring Boot</span>
+<span>REST API</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/muskantanwar7/Finance-Data-Processing-and-Access-Control-Backend" target="_blank">
+
+GitHub
+
+</a>
+
+</div>
+
+</div>
+
+<div class="project-card glass-card">
+
+<div class="project-number">03</div>
+
+<h3>🧠 Code Plagiarism Detection</h3>
+
+<p>
+
+Intelligent plagiarism detector using NLP,
+TF-IDF Vectorization and Cosine Similarity
+to compare source codes efficiently.
+
+</p>
+
+<div class="tech">
+
+<span>Python</span>
+<span>NLP</span>
+<span>TF-IDF</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/muskantanwar7/Code-Plagiarism-Detection-System" target="_blank">
+
+GitHub
+
+</a>
+
+</div>
+
+</div>
+
+<div class="project-card glass-card">
+
+<div class="project-number">04</div>
+
+<h3>🎥 Online Exam Cheating Detection</h3>
+
+<p>
+
+AI-based online proctoring system using
+OpenCV and MediaPipe for face detection,
+eye tracking and suspicious activity alerts.
+
+</p>
+
+<div class="tech">
+
+<span>Python</span>
+<span>MediaPipe</span>
+<span>OpenCV</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="https://github.com/muskantanwar7/Online-Exam-Cheating-Detection-System" target="_blank">
+
+GitHub
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section class="reveal">
+
+<h2 class="title">
+
+Certifications
+
+</h2>
+
+<div class="certificate-grid">
+
+<div class="glass-card certificate">
+
+<i class="fa-brands fa-aws"></i>
+
+<h3>
+
+Generative AI
+
+</h3>
+
+<p>
+
+Amazon Web Services (AWS)
+
+</p>
+
+</div>
+
+<div class="glass-card certificate">
+
+<i class="fa-solid fa-award"></i>
+
+<h3>
+
+Introduction to Soft Skills
+
+</h3>
+
+<p>
+
+TCS iON
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section class="reveal">
+
+<h2 class="title">
+
+Achievements
+
+</h2>
+
+<div class="achievement-grid">
+
+<div class="glass-card achievement">
+
+<h1>550+</h1>
+
+<p>
+
+Problems solved on LeetCode.
+
+</p>
+
+</div>
+
+<div class="glass-card achievement">
+
+<h1>4</h1>
+
+<p>
+
+AI & Full Stack Projects.
+
+</p>
+
+</div>
+
+<div class="glass-card achievement">
+
+<h1>2</h1>
+
+<p>
+
+Professional Internships.
+
+</p>
+
+</div>
+
+<div class="glass-card achievement">
+
+<h1>2025</h1>
+
+<p>
+
+Amazon QAE Intern.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.projects-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+gap:35px;
+
+}
+
+.project-card{
+
+position:relative;
+overflow:hidden;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-15px);
+
+}
+
+.project-number{
+
+position:absolute;
+right:20px;
+top:15px;
+font-size:70px;
+font-weight:800;
+opacity:.08;
+
+}
+
+.project-card h3{
+
+margin-bottom:20px;
+
+}
+
+.project-card p{
+
+line-height:1.8;
+margin-bottom:20px;
+
+}
+
+.tech{
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:25px;
+
+}
+
+.tech span{
+
+background:#ffe6f2;
+padding:8px 15px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+color:#ff4fa1;
+
+}
+
+body.dark .tech span{
+
+background:#262626;
+
+}
+
+.project-buttons a{
+
+display:inline-block;
+padding:12px 25px;
+background:#ff4fa1;
+color:white;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.project-buttons a:hover{
+
+transform:scale(1.08);
+
+}
+
+.certificate-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.certificate{
+
+text-align:center;
+
+}
+
+.certificate i{
+
+font-size:65px;
+margin-bottom:20px;
+color:#ff4fa1;
+
+}
+
+.achievement-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+.achievement{
+
+text-align:center;
+
+}
+
+.achievement h1{
+
+font-size:60px;
+color:#ff4fa1;
+margin-bottom:15px;
+
+}
+
+</style>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="reveal">
+
+<h2 class="title">Let's Connect</h2>
+
+<div class="contact-grid">
+
+<div class="glass-card">
+
+<h3>Get In Touch 💖</h3>
+
+<p>I’m always open to internships, software engineering opportunities, collaborations, and exciting projects.</p>
+
+<div class="contact-item">
+<i class="fa-solid fa-envelope"></i>
+<span>muskantanwar344@gmail.com</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-phone"></i>
+<span>+91 7015701673</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-location-dot"></i>
+<span>Faridabad, Haryana</span>
+</div>
+
+<div class="social">
+
+<a href="https://github.com/muskantanwar7" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://leetcode.com/u/muskan_tanwar57/" target="_blank">
+<i class="fas fa-code"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/muskan-tanwar-6543822b1" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="glass-card">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<input type="text" placeholder="Subject">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button class="btn primary" type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Muskan Tanwar</h2>
+
+<p>
+Designed & Developed with ❤️ using HTML, CSS & JavaScript.
+</p>
+
+<p>
+
+© 2026 All Rights Reserved.
+
+</p>
+
+</footer>
+
+<style>
+
+.contact-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:40px;
+
+}
+
+.contact-item{
+
+display:flex;
+align-items:center;
+gap:15px;
+margin-top:20px;
+
+}
+
+.contact-item i{
+
+font-size:22px;
+color:#ff4fa1;
+
+}
+
+form{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+form input,
+form textarea{
+
+padding:18px;
+border:none;
+border-radius:15px;
+background:#f8f8f8;
+font-size:15px;
+
+}
+
+body.dark form input,
+body.dark form textarea{
+
+background:#222;
+color:white;
+
+}
+
+footer{
+
+padding:60px 8%;
+text-align:center;
+background:#ff4fa1;
+color:white;
+margin-top:80px;
+
+}
+
+footer h2{
+
+margin-bottom:10px;
+
+}
+
+</style>
+
+<script>
+
+/* Loader */
+
+window.onload=()=>{
+
+setTimeout(()=>{
+
+document.querySelector(".loader").classList.add("hide");
+
+},1200);
+
+};
+
+/* Dark Mode */
+
+const toggle=document.querySelector(".toggle");
+
+toggle.onclick=()=>{
+
+document.body.classList.toggle("dark");
+
+toggle.innerHTML=document.body.classList.contains("dark")
+?'<i class="fa-solid fa-sun"></i>'
+:'<i class="fa-solid fa-moon"></i>';
+
+};
+
+/* Cursor */
+
+
+
+/* Typing Effect */
+
+const text=[
+"Software Developer",
+"AI Enthusiast",
+"Full Stack Developer",
+"Problem Solver"
+];
+
+let count=0;
+let index=0;
+let current="";
+let letter="";
+
+(function type(){
+
+if(count===text.length){
+
+count=0;
+
+}
+
+current=text[count];
+letter=current.slice(0,++index);
+
+document.getElementById("typing").textContent=letter;
+
+if(letter.length===current.length){
+
+count++;
+index=0;
+
+setTimeout(type,1200);
+
+}else{
+
+setTimeout(type,80);
+
+}
+
+})();
+
+/* Scroll Reveal */
+
+const reveals=document.querySelectorAll(".reveal");
+
+function reveal(){
+
+reveals.forEach(r=>{
+
+const top=r.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+
+r.classList.add("active");
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll",reveal);
+
+reveal();
+
+/* Counters */
+
+const counters=document.querySelectorAll(".counter");
+
+const runCounter=()=>{
+
+counters.forEach(counter=>{
+
+const target=+counter.dataset.target;
+
+let c=0;
+
+const inc=target/120;
+
+const update=()=>{
+
+c+=inc;
+
+if(c<target){
+
+counter.innerHTML=Math.ceil(c);
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerHTML=target+"+";
+
+}
+
+};
+
+update();
+
+});
+
+};
+
+runCounter();
+
+/* Skill Bars */
+
+document.querySelectorAll(".progress-bar").forEach(bar=>{
+
+setTimeout(()=>{
+
+bar.style.width=bar.dataset.width;
+
+},900);
+
+});
+
+</script>
+
+</body>
+
+</html>
+
